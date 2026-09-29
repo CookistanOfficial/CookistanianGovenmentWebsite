@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Weather Service - Cookistan</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f0eb; color: #3e2723; }
+        header { background-color: #c49a6c; color: white; text-align: center; padding: 20px 0; border-bottom: 5px solid #8d6e63; }
+        nav { background-color: #5d4037; display: flex; justify-content: center; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { background-color: #8d6e63; }
+        .container { padding: 30px; max-width: 900px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        pre { background: #333; color: #00ff00; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; font-family: monospace; }
+        footer { text-align: center; padding: 15px; background-color: #5d4037; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cookistan National Weather Service</h1>
+        <p>Live Weather Watches, Warnings & Advisories</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="weather.html">Weather Service</a>
+        <a href="citizenship.html">Digital Citizenship</a>
+        <a href="gazette.html">Government Gazette</a>
+        <a href="news.html">News Station</a>
+        <a href="links.html">Links & Resources</a>
+    </nav>
+
+    <div class="container">
+        <h2>Active Weather Bulletin</h2>
+        <p>The display below automatically reads directly from the official text document for current weather notices:</p>
+        
+        <pre id="weather-content">Loading weather bulletin...</pre>
+    </div>
+
+    <script>
+        fetch('weather.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('weather-content').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('weather-content').textContent = "Error loading weather advisories file. Make sure weather.txt is in the website folder.";
+            });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Republic of Cookistan Government. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

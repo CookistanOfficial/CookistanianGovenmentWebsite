@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookistan News Station</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f0eb; color: #3e2723; }
+        header { background-color: #c49a6c; color: white; text-align: center; padding: 20px 0; border-bottom: 5px solid #8d6e63; }
+        nav { background-color: #5d4037; display: flex; justify-content: center; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { background-color: #8d6e63; }
+        .container { padding: 30px; max-width: 900px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        pre { background: #fff8e1; color: #333; padding: 20px; border-left: 5px solid #c49a6c; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; font-family: Arial, sans-serif; line-height: 1.5; }
+        footer { text-align: center; padding: 15px; background-color: #5d4037; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cookistan State News Station</h1>
+        <p>Official Media & Press Releases</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="weather.html">Weather Service</a>
+        <a href="citizenship.html">Digital Citizenship</a>
+        <a href="gazette.html">Government Gazette</a>
+        <a href="news.html">News Station</a>
+        <a href="links.html">Links & Resources</a>
+    </nav>
+
+    <div class="container">
+        <h2>Latest News & Announcements</h2>
+        <p>Read current press updates and national bulletins directly from our central feed:</p>
+        
+        <pre id="news-content">Loading news feed...</pre>
+    </div>
+
+    <script>
+        fetch('news.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('news-content').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('news-content').textContent = "Error loading news feed. Make sure news.txt is in the website folder.";
+            });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Republic of Cookistan Government. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

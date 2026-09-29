@@ -1,0 +1,39 @@
+===================================================================
+             REPUBLIC OF COOKISTAN NATIONAL WEATHER SERVICE        
+                   OFFICIAL METEOROLOGICAL BULLETIN                
+===================================================================
+
+[CURRENT CONDITIONS]
+Location: Port Cookie (Capital District)
+Temperature: 72°F (22°C)
+Wind: WNW at 8 mph
+Humidity: 45%
+Barometer: 30.12 in
+Sky: Mostly Sunny with Light Chocolate-Chip Cloud Cover
+
+-------------------------------------------------------------------
+[24-HOUR FORECAST]
+-------------------------------------------------------------------
+Today: 
+Warm and pleasant across all administrative sectors. Light breezes 
+coming from the North Doughlands. High around 75°F.
+
+Tonight: 
+Clear skies with excellent conditions for stargazing. Temperatures 
+cooling down to a comfortable 58°F.
+
+Tomorrow: 
+Scattered cloudiness in the morning leading to bright sunshine by 
+afternoon. High near 78°F.
+
+-------------------------------------------------------------------
+[SPECIAL ADVISORIES & WATCHES]
+-------------------------------------------------------------------
+* NO ACTIVE SEVERE WEATHER WARNINGS AT THIS TIME.
+* MARINERS ADVISORY: Mild surf conditions along the Southern Coast. 
+  Safe for all small craft navigation.
+
+===================================================================
+Issued by the Cookistan NWS Central Station.
+For live updates, check back regularly on the official portal.
+===================================================================

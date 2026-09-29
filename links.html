@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Links & Resources - Cookistan</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f0eb; color: #3e2723; }
+        header { background-color: #c49a6c; color: white; text-align: center; padding: 20px 0; border-bottom: 5px solid #8d6e63; }
+        nav { background-color: #5d4037; display: flex; justify-content: center; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { background-color: #8d6e63; }
+        .container { padding: 30px; max-width: 900px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        pre { background: #fafafa; color: #222; padding: 20px; border: 1px solid #ccc; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; font-family: Georgia, serif; line-height: 1.6; }
+        footer { text-align: center; padding: 15px; background-color: #5d4037; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Official External Directory</h1>
+        <p>Links, Resources & Allied Network Portals</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="weather.html">Weather Service</a>
+        <a href="citizenship.html">Digital Citizenship</a>
+        <a href="gazette.html">Government Gazette</a>
+        <a href="news.html">News Station</a>
+        <a href="links.html">Links & Resources</a>
+    </nav>
+
+    <div class="container">
+        <h2>Official Directory</h2>
+        <p>Below is the official text archive containing external links, diplomatic contacts, and state resource directories:</p>
+        
+        <pre id="links-content">Loading links directory...</pre>
+    </div>
+
+    <script>
+        fetch('links.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('links-content').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('links-content').textContent = "Error loading links directory file. Make sure links.txt is in the website folder.";
+            });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Republic of Cookistan Government. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
